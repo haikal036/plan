@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <form>
+
     <div class="container position-absolute top-50 start-50 translate-middle">
 
         <div class="card">
@@ -35,11 +37,15 @@
                     <!--Current Plan Section-->
                     <div class="col mt-2 mb-2">
                         <label for="current" class="d-flex justify-content-center">Current Plan</label>
-                            <select class="form-control d-flex justify-content-center">
-                                <option id="1.00">Basic</option>
-                                <option id="1.67">Standard</option>
-                                <option id="3.33">Premium</option>
-                                <option id="4.97">Ultimate</option>
+                            <select id="current" name="current" class="form-control d-flex justify-content-center">
+                                <optgroup label="Plan">
+                                    <option id="0.00" selected>Please choose your plan</option>
+                                    <option id="1.00">Basic</option>
+                                    <option id="1.67">Standard</option>
+                                    <option id="3.33">Premium</option>
+                                    <option id="4.97">Ultimate</option>
+                                </optgroup>
+                                
                             </select>
                     </div>
 
@@ -54,11 +60,15 @@
                     <!--Upgrade Plan Section-->
                     <div class="col mt-2 mb-2">
                         <label for="upgrade" class="d-flex justify-content-center">Upgrade Plan</label>
-                            <select class="form-control">
-                                <option id="1.00">Basic</option>
-                                <option id="1.67">Standard</option>
-                                <option id="3.33">Premium</option>
-                                <option id="4.97">Ultimate</option>
+                            <select id="upgrade" name="upgrade" class="form-control">
+                                <optgroup label="Plan">
+                                    <option id="0.00" selected>Please choose your plan</option>
+                                    <option id="1.00">Basic</option>
+                                    <option id="1.67">Standard</option>
+                                    <option id="3.33">Premium</option>
+                                    <option id="4.97">Ultimate</option>
+                                </optgroup>
+                                
                             </select>
                     </div>
 
@@ -196,4 +206,6 @@
     })()
     </script>
 
-</body></html>
+    </form>
+    </body>
+</html>
