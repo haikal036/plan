@@ -14,10 +14,10 @@
             <div class="card-header">
                 <!--This code is for header, shows title and change themes-->
                 <div class="row">
-                    <div class="col d-flex justify-content-start">
+                    <div class="col d-flex justify-content-center">
                         Upgrade Plan Calculation
                     </div>
-                    <div class="col d-flex justify-content-end">
+                    <div class="d-flex justify-content-end">
                         <button class="btn btn-light mx-2" data-bs-theme-value="light">
                             Light
                         </button>
@@ -31,9 +31,9 @@
 
             <!--Start of paragraph,all coding shall be done within below-->
             <div class="card-body">
-                <div class="row">
+                <div class="row mb-3">
                     <!--Current Plan Section-->
-                    <div class="col">
+                    <div class="col mt-2 mb-2">
                         <label for="current" class="d-flex justify-content-center">Current Plan</label>
                             <select class="form-control d-flex justify-content-center">
                                 <option id="1.00">Basic</option>
@@ -43,7 +43,7 @@
                             </select>
                     </div>
 
-                    <div class="col">
+                    <div class="col mt-2 mb-2">
                         <label for="current_used" class="d-flex justify-content-center">Remaining Current Plan Day (Used Days)</label>
                         <input class="form-control" required="">
                     </div>
@@ -52,7 +52,7 @@
 
                 <div class="row">
                     <!--Upgrade Plan Section-->
-                    <div class="col">
+                    <div class="col mt-2 mb-2">
                         <label for="upgrade" class="d-flex justify-content-center">Upgrade Plan</label>
                             <select class="form-control">
                                 <option id="1.00">Basic</option>
@@ -62,7 +62,7 @@
                             </select>
                     </div>
 
-                    <div class="col">
+                    <div class="col mt-2 mb-2">
                         <label for="upgrade_future" class="d-flex justify-content-center">Remaining Upgrade Plan Day (Future Upgrade)</label>
                         <input class="form-control" required="">
                     </div>
