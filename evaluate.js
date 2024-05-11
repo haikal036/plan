@@ -1,25 +1,9 @@
-function evaluate() {
-
-    var current = parseFloat(document.getElementById('current').value);
+function add() {
+    var current_plan = parseFloat(document.getElementById('current_plan').value);
     var current_used = parseFloat(document.getElementById('current_used').value);
-    var upgrade = parseFloat(document.getElementById('upgrade').value);
-    var upgrade_future = parseFloat(document.getElementById('upgrade_future').value);
+    var next_plan = parseFloat(document.getElementById('next_plan').value);
+    var next_day = parseFloat(document.getElementById('next_day').value);
 
-    // Check if inputs are valid
-    //if (isNaN(current) || isNaN(upgrade)) 
-    //{
-    //    alert("Please enter valid data");
-    //    return;
-    //}
-
-    // Perform the calculation
-    var upgrade_price = (upgrade_future * upgrade) - (current_used * current);
-
-    //if (current === 1.00 || current === 1.69 || current === 3.33 || current === 4.97) 
-    //{
-    //   upgrade_price = (upgrade_future * upgrade) - (current_used * current);
-    //}
-
-    // Display the result
-    document.getElementById("result").textContent = "Upgrade Price: " + upgrade_price.toFixed(2);
+    var upgrade_price = (next_day * next_plan) - (current_used * current_plan);
+    document.getElementById('upgrade_price').textContent = "Result: " + upgrade_price;
 }
