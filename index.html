@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <title>Upgrade Plan Calculation</title>
     <script src="evaluate.js" defer></script>
+    
 </head>
 
 <body>
@@ -40,6 +41,24 @@
         
         <!--Start of paragraph,all coding shall be done within below-->
         <div class="card-body">
+            <div class="row">
+                <!-- Customer Data-->
+                <div class="col">
+                    <label type="">Name :</label>
+                    <input type="text" class="form-control" id="name" value="">
+                </div>
+
+                <div class="col">
+                    <label type="">Email :</label>
+                    <input type="text" class="form-control" id="email" value="">
+                </div>
+                    
+                <div class="col">
+                    <label type="">No phone :</label>
+                    <input type="number" class="form-control" id="phone" value="" >
+                </div>
+            </div>
+                
             <div class="row">
                 <!--Current Plan Section-->
                     <div class="col">
@@ -88,6 +107,9 @@
                 <!--Result Display-->
                 <div class="row">
                     <div class="col">
+                        <div id="name"></div>
+                        <div id="email"></div>
+                        <div id="phone"></div>
                         <div id="result"></div>
                         <div id="date"></div>
                     </div>
