@@ -14,8 +14,12 @@
 
 <body>
 
+<div class="col d-flex justify-content-end mt-3 pe-3">
+    <button onclick="print()" class="btn btn-secondary">Print</button>
+</div>
+
 <div class="container position-absolute top-50 start-50 translate-middle">
-    <div class="card"></div>
+    <div class="card">
         <div class="card-header">
             <!--This code is for header, shows title and change themes-->
             <div class="row">
@@ -77,7 +81,7 @@
                     <!--Submit data-->
                 <div class="row">
                     <div class="col d-flex justify-content-center mt-3 mb-3">
-                        <button onclick="calculate()">Proceed</button>
+                        <button onclick="calculate()" class="btn btn-primary">Proceed</button>
                     </div>
                 </div>
 
@@ -85,6 +89,7 @@
                 <div class="row">
                     <div class="col">
                         <div id="result"></div>
+                        <div id="date"></div>
                     </div>
                 </div>
             </div>

@@ -6,4 +6,7 @@ function calculate() {
 
     var upgrade_price = (next_day * next_plan) - (current_used * current_plan);
     document.getElementById('result').textContent = "Upgrade Price: " + upgrade_price;
+
+    const d = new Date();
+    document.getElementById("date").innerHTML = d;
 }
