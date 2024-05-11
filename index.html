@@ -10,18 +10,16 @@
 </head>
 
 <body>
-    <form>
-
     <div class="container position-absolute top-50 start-50 translate-middle">
 
         <div class="card">
             <div class="card-header">
                 <!--This code is for header, shows title and change themes-->
                 <div class="row">
-                    <div class="col d-flex justify-content-center">
+                    <div class="col d-flex justify-content-start">
                         Upgrade Plan Calculation
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="col d-flex justify-content-end">
                         <button class="btn btn-light mx-2" data-bs-theme-value="light">
                             Light
                         </button>
@@ -35,19 +33,19 @@
 
             <!--Start of paragraph,all coding shall be done within below-->
             <div class="card-body">
-                <div class="row mb-3">
+                <div class="row">
                     <!--Current Plan Section-->
-                    <div class="col mt-2 mb-2">
+                    <div class="col">
                         <label for="current" class="d-flex justify-content-center">Current Plan</label>
-                            <select class="form-control d-flex justify-content-center">
-                                <option id="1.00">Basic</option>
-                                <option id="1.67">Standard</option>
-                                <option id="3.33">Premium</option>
-                                <option id="4.97">Ultimate</option>
+                            <select class="form-control" id="current">
+                                <option value="1.00">Basic</option>
+                                <option value="1.67">Standard</option>
+                                <option value="3.33">Premium</option>
+                                <option value="4.97">Ultimate</option>
                             </select>
                     </div>
 
-                    <div class="col mt-2 mb-2">
+                    <div class="col">
                         <label for="current_used" class="d-flex justify-content-center">Remaining Current Plan Day (Used Days)</label>
                         <input class="form-control" id="current_used" required="">
                     </div>
@@ -56,17 +54,17 @@
 
                 <div class="row">
                     <!--Upgrade Plan Section-->
-                    <div class="col mt-2 mb-2">
+                    <div class="col">
                         <label for="upgrade" class="d-flex justify-content-center">Upgrade Plan</label>
-                            <select class="form-control">
-                                <option id="1.00">Basic</option>
-                                <option id="1.67">Standard</option>
-                                <option id="3.33">Premium</option>
-                                <option id="4.97">Ultimate</option>
+                            <select class="form-control" id="upgrade">
+                                <option value="1.00">Basic</option>
+                                <option value="1.67">Standard</option>
+                                <option value="3.33">Premium</option>
+                                <option value="4.97">Ultimate</option>
                             </select>
                     </div>
 
-                    <div class="col mt-2 mb-2">
+                    <div class="col">
                         <label for="upgrade_future" class="d-flex justify-content-center">Remaining Upgrade Plan Day (Future Upgrade)</label>
                         <input class="form-control" id="upgrade_future" required="">
                     </div>
@@ -168,4 +166,8 @@
     })()
     </script>
 
-</body></html>
+        <p id="upgrade_price"></p>
+
+
+    </body>
+</html>
