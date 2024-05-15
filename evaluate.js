@@ -1,16 +1,23 @@
 function calculate() {
     
-    var current_plan = parseFloat(document.getElementById('current_plan').value);
-    var current_used = parseFloat(document.getElementById('current_used').value);
-    var next_plan = parseFloat(document.getElementById('next_plan').value);
-    var next_day = parseFloat(document.getElementById('next_day').value);
+    let current_plan = parseFloat(document.getElementById('current_plan').value);
+    let current_used = parseFloat(document.getElementById('current_used').value);
+    let next_plan = parseFloat(document.getElementById('next_plan').value);
+    let next_day = parseFloat(document.getElementById('next_day').value);
+    const date = new Date();
+    
+    let plan_price = next_plan * 365;
+    let next = (next_day * next_plan);
+    let current = (current_used * current_plan);
 
-    var upgrade_price = (next_day * next_plan) - (current_used * current_plan);
+    let upgrade_price = next - current;
+    let prorate = plan_price - upgrade_price;
+    let total = upgrade_price - prorate;
 
     document.getElementById('result').textContent = "Upgrade Price: RM " + upgrade_price;
-
-    const d = new Date();
-    document.getElementById("date").innerHTML = d;
+    document.getElementById('prorate').textContent = "Prorate Discount: RM " + prorate;
+    document.getElementById('total').textContent = "Total : RM " + total;
+    document.getElementById("date").innerHTML = date;
 }
 
 (() => {
