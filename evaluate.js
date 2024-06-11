@@ -17,7 +17,7 @@ function calculate_yearly() {
     document.getElementById('result').textContent = "Upgrade Price: RM " + upgrade_price;
     document.getElementById('prorate').textContent = "Prorate Discount: RM " + prorate;
     document.getElementById('total').textContent = "Total : RM " + total;
-    document.getElementById("date").innerHTML = date;
+    document.getElementById('date').innerHTML = date;
 }
 
 function calculate_monthly() {
@@ -39,7 +39,7 @@ function calculate_monthly() {
     document.getElementById('result').textContent = "Upgrade Price: RM " + upgrade_price;
     document.getElementById('prorate').textContent = "Prorate Discount: RM " + prorate;
     document.getElementById('total').textContent = "Total : RM " + total;
-    document.getElementById("date").innerHTML = date;
+    document.getElementById('date').innerHTML = date;
 }
 
 (() => {
