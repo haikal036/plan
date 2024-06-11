@@ -24,7 +24,7 @@
             <!--This code is for header, shows title and change themes-->
             <div class="row">
                 <div class="col d-flex justify-content-start">
-                    Upgrade Plan Calculation
+                    Shoppegram Upgrade/Degrade Plan Calculation
                 </div>
                 <div class="col d-flex justify-content-end">
                     <button class="btn btn-light mx-2" data-bs-theme-value="light">
@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="col">
-                        <label for="current_used" class="d-flex justify-content-center mt-2 mb-2">Remaining Current Plan Day</label>
+                        <label for="current_used" class="d-flex justify-content-center mt-2 mb-2">Used Current Plan Day</label>
                         <input class="form-control" id="current_used" required="">
                     </div>
                 <!--End Current Plan Section-->
@@ -105,7 +105,8 @@
                     <!--Submit data-->
                 <div class="row">
                     <div class="col d-flex justify-content-center mt-3 mb-3">
-                        <button onclick="calculate()" class="btn btn-primary">Proceed</button>
+                        <button onclick="calculate_yearly()" class="btn btn-primary mx-2 px-2">Proceed Yearly</button>
+                        <button onclick="calculate_monthly()" class="btn btn-primary mx-2 px-2">Proceed Monthly</button>
                     </div>
                 </div>
 
