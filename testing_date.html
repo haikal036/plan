@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <title>Upgrade Plan Calculation</title>
-    <script src="evaluate.js" defer></script>
+    <script src="calculate.js" defer></script>
     
 </head>
 
@@ -65,10 +65,10 @@
                             <select id="current_plan" class="form-control">
                                 <!--Display option-->
                                 <optgroup label="Choose Plan">
-                                    <option value="1.00">Basic</option>
-                                    <option value="1.67">Standard</option>
-                                    <option value="3.33">Premium</option>
-                                    <option value="4.97">Ultimate</option>
+                                    <option value="349">Basic</option>
+                                    <option value="599">Standard</option>
+                                    <option value="1199">Premium</option>
+                                    <option value="1799">Ultimate</option>
                                 </optgroup>
                             </select>
                     </div>
@@ -87,10 +87,10 @@
                             <select id="next_plan" class="form-control">
                                 <!--Display option-->
                                 <optgroup label="Choose Plan">
-                                    <option value="1.00">Basic</option>
-                                    <option value="1.67">Standard</option>
-                                    <option value="3.33">Premium</option>
-                                    <option value="4.97">Ultimate</option>
+                                    <option value="349">Basic</option>
+                                    <option value="599">Standard</option>
+                                    <option value="1199">Premium</option>
+                                    <option value="1799">Ultimate</option>
                                 </optgroup>
                             </select>
                     </div>
@@ -112,9 +112,10 @@
                 <!--Result Display-->
                 <div class="row">
                     <div class="col">
-                        <div id="count_past"></div>
-                        <div id="count_future"></div>
+                        <div id="second"></div>
+                        <div id="distance"></div>
                         <div id="result"></div>
+                        <br>
                         <div id="date"></div>
                     </div>
                 </div>
