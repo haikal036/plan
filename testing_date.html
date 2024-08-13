@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <title>Upgrade Plan Calculation</title>
-    <script src="calculate.js" defer></script>
+    <script src="testingdate.js" defer></script>
     
 </head>
 
@@ -72,11 +72,17 @@
                                 </optgroup>
                             </select>
                     </div>
+                    <!-- Date for Current Start & End-->
+                    <div class="col">
+                        <label for="startCurrentDate" class="d-flex justify-content-center mt-2 mb-2">Start of Current Plan Date</label>
+                        <input type="date" class="form-control" id="startCurrentDate" required="">
+                    </div>
 
                     <div class="col">
-                        <label for="current_used" class="d-flex justify-content-center mt-2 mb-2">Current Plan Date</label>
-                        <input type="date" class="form-control" id="current_used" required="">
+                        <label for="endCurrentDate" class="d-flex justify-content-center mt-2 mb-2">End of Current Plan Date</label>
+                        <input type="date" class="form-control" id="endCurrentDate" required="">
                     </div>
+                    <!--End of Current Start & End -->
                 <!--End Current Plan Section-->
             </div>
 
@@ -84,7 +90,7 @@
                     <!--Upgrade Plan Section-->
                     <div class="col">
                         <label class="d-flex justify-content-center mt-2 mb-2">Next Plan :</label>
-                            <select id="next_plan" class="form-control">
+                            <select id="upgrade_plan" class="form-control">
                                 <!--Display option-->
                                 <optgroup label="Choose Plan">
                                     <option value="349">Basic</option>
@@ -94,29 +100,37 @@
                                 </optgroup>
                             </select>
                     </div>
+                    <!-- Start of Upgrade Start & End Date-->
+                    <div class="col">
+                        <label for="startUpgradeDate" class="d-flex justify-content-center mt-2 mb-2">Upgrade Plan Date</label>
+                        <input type="date" class="form-control" id="startUpgradeDate" required="">
+                    </div>
 
                     <div class="col">
-                        <label for="next_day" class="d-flex justify-content-center mt-2 mb-2">Upgrade Plan Date</label>
-                        <input type="date" class="form-control" id="next_day" required="">
+                        <label for="endUpgradeDate" class="d-flex justify-content-center mt-2 mb-2">Upgrade Plan Date</label>
+                        <input type="date" class="form-control" id="endUpgradeDate" required="">
                     </div>
+                    <!-- End of Upgrade Start & End Date-->
                     <!--End Upgrade Plan Section-->
                 </div>
                     
                     <!--Submit data-->
                 <div class="row">
                     <div class="col d-flex justify-content-center mt-3 mb-3">
-                        <button onclick="calculate()" class="btn btn-primary">Proceed</button>
+                        <button onclick="calculate_yearly()" class="btn btn-primary">Proceed</button>
                     </div>
                 </div>
 
                 <!--Result Display-->
                 <div class="row">
                     <div class="col">
-                        <div id="second"></div>
-                        <div id="distance"></div>
-                        <div id="result"></div>
+                        <div id="difference_current"></div>
+                        <div id="difference_upgrade"></div>
                         <br>
-                        <div id="date"></div>
+                        <div id="result"></div>
+                        <div id="prorate"></div>
+                        <div id="total"></div>
+                        <br>
                     </div>
                 </div>
             </div>
