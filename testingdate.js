@@ -40,18 +40,18 @@ function calculate_yearly() {
     console.log(upgrade_price);
 
     //calculate upgrade price
-    let upgrade_total = (dayDifference_upgrade * upgrade_plan) - (dayDifference_current * current_plan)
+    let upgrade_total = upgrade_price - current_price;
     console.log(upgrade_total);
 
     //calculate prorate
-    //let prorate = upgrade_plan - upgrade_total;
+    let prorate = upgrade_plan - upgrade_total;
 
-    document.getElementById('difference_current').textContent = "Total Current Plan Used Days: " + dayDifference_current;
-    document.getElementById('current_price').textContent = "Amount Current Price: RM" + current_price;
-    document.getElementById('difference_upgrade').textContent = "Total Upgrade Plan Days: " + dayDifference_upgrade;
-    document.getElementById('upgrade_price').textContent = "Amount Upgrade Price: RM" + upgrade_price;
-    document.getElementById('result').textContent = "Upgrade Price: RM " + upgrade_total;
-    document.getElementById('prorate').textContent = "Prorate Discount: RM " + prorate;
+    document.getElementById('difference_current').textContent = "Current Plan Used Days: " + dayDifference_current;
+    document.getElementById('current_price').textContent = "Current Price: RM " + current_price;
+    document.getElementById('difference_upgrade').textContent = "Upgrade Plan Days: " + dayDifference_upgrade;
+    document.getElementById('upgrade_price').textContent = "Upgrade Price: RM " + upgrade_price;
+    document.getElementById('result').textContent = "Upgrade Price To Pay: RM " + upgrade_total;
+    document.getElementById('prorate').textContent = "Prorate Discount Given to Customer: RM " + prorate;
 }
 
 (() => {
