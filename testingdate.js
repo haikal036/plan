@@ -44,7 +44,9 @@ function calculate_yearly() {
     console.log(upgrade_total);
 
     //calculate prorate
-    let prorate = upgrade_plan - upgrade_total;
+    let prorate = current_price;
+
+    //create a logic where if a month, it will get the full date and then it will = full date of month - used days = (remaining unused days * daily rate) to be prorate discount
 
     document.getElementById('difference_current').textContent = "Current Plan Used Days: " + dayDifference_current;
     document.getElementById('current_price').textContent = "Current Price: RM " + current_price;
