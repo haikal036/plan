@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <title>Upgrade Plan Calculation</title>
+    <script src="testingdate.js" defer></script>
+    
+</head>
+
+<body>
+
+<div class="col d-flex justify-content-end mt-3 pe-3">
+    <button onclick="print()" class="btn btn-secondary">Print</button>
+</div>
+
+<div class="container position-absolute top-50 start-50 translate-middle">
+    <div class="card">
+
+        <div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Yearly</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Monthly</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"></div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"></div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"></div>
+            </div>
+        </div>
+
+        <div class="card-header">
+            <!--This code is for header, shows title and change themes-->
+            <div class="row">
+                <div class="col d-flex justify-content-start">
+                    Upgrade Plan Calculation
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-light mx-2" data-bs-theme-value="light">
+                        Light
+                    </button>
+                    
+                    <button class="btn btn-dark mx-2" data-bs-theme-value="dark">
+                        Dark
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!--Start of paragraph,all coding shall be done within below-->
+        <div class="card-body">
+
+            <div class="row" id="home-tab-pane">
+                <div class="col d-flex justify-content-center mt-3 mb-3">
+                    <a href="subscription/testing_yearly.html" class="btn btn-primary mx-2 px-2">
+                        Proceed Yearly
+                    </a>
+                    <a href="subscription/testing_monthly.html" class="btn btn-primary mx-2 px-2">
+                        Proceed Monthly
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Customer Data-->
+                <div class="col">
+                    <label type="">Name :</label>
+                    <input type="text" class="form-control" id="name" value="">
+                </div>
+
+                <div class="col">
+                    <label type="">Email :</label>
+                    <input type="text" class="form-control" id="email" value="">
+                </div>
+                    
+                <div class="col">
+                    <label type="">No phone :</label>
+                    <input type="number" class="form-control" id="phone" value="" >
+                </div>
+            </div>
+                
+            <div class="row">
+                <!--Current Plan Section-->
+                    <div class="col">
+                        <label class="d-flex justify-content-center mt-2 mb-2">Current Plan :</label>
+                            <select id="current_plan" class="form-control">
+                                <!--Display option-->
+                                <optgroup label="Yearly Plan">
+                                    <option value="1.00">Y - Basic</option>
+                                    <option value="1.69">Y - Standard</option>
+                                    <option value="3.33">Y - Premium</option>
+                                    <option value="4.97">Y - Ultimate</option>
+                                </optgroup>
+                                <optgroup label="Monthly Plan">
+                                    <option value="1.97">M - Basic</option>
+                                    <option value="3.30">M - Standard</option>
+                                    <option value="6.63">M - Premium</option>
+                                    <option value="9.97">M - Ultimate</option>
+                                </optgroup>
+                            </select>
+                    </div>
+                    <!-- Date for Current Start & End-->
+                    <div class="col">
+                        <label for="startCurrentDate" class="d-flex justify-content-center mt-2 mb-2">Start of Current Plan Date</label>
+                        <input type="date" class="form-control" id="startCurrentDate" required="">
+                    </div>
+
+                    <div class="col">
+                        <label for="endCurrentDate" class="d-flex justify-content-center mt-2 mb-2">End of Current Plan Date</label>
+                        <input type="date" class="form-control" id="endCurrentDate" required="">
+                    </div>
+                    <!--End of Current Start & End -->
+                <!--End Current Plan Section-->
+            </div>
+
+                <div class="row">
+                    <!--Upgrade Plan Section-->
+                    <div class="col">
+                        <label class="d-flex justify-content-center mt-2 mb-2">Next Plan :</label>
+                            <select id="upgrade_plan" class="form-control">
+                                <!--Display option-->
+                                <optgroup label="Yearly Plan">
+                                    <option value="1.00">Y - Basic</option>
+                                    <option value="1.69">Y - Standard</option>
+                                    <option value="3.33">Y - Premium</option>
+                                    <option value="4.79">Y - Ultimate</option>
+                                </optgroup>
+                                <optgroup label="Monthly Plan">
+                                    <option value="1.97">M - Basic</option>
+                                    <option value="3.30">M - Standard</option>
+                                    <option value="6.63">M - Premium</option>
+                                    <option value="9.97">M - Ultimate</option>
+                                </optgroup>
+                            </select>
+                    </div>
+                    <!-- Start of Upgrade Start & End Date-->
+                    <div class="col">
+                        <label for="startUpgradeDate" class="d-flex justify-content-center mt-2 mb-2">Upgrade Plan Date</label>
+                        <input type="date" class="form-control" id="startUpgradeDate" required="">
+                    </div>
+
+                    <div class="col">
+                        <label for="endUpgradeDate" class="d-flex justify-content-center mt-2 mb-2">Upgrade Plan Date</label>
+                        <input type="date" class="form-control" id="endUpgradeDate" required="">
+                    </div>
+                    <!-- End of Upgrade Start & End Date-->
+                    <!--End Upgrade Plan Section-->
+                </div>
+                    
+                    <!--Submit data-->
+                <div class="row">
+                    <div class="col d-flex justify-content-center mt-3 mb-3">
+                        <button onclick="calculate_yearly()" class="btn btn-primary">Proceed</button>
+                    </div>
+                </div>
+
+                <!--Result Display-->
+                <div class="row">
+                    <div class="col">
+                        <div id="difference_current"></div>
+                        <div id="current_price"></div>
+                        <br>
+                        <div id="difference_upgrade"></div>
+                        <div id="upgrade_price"></div>  
+                        <br>
+                        <div id="result"></div>
+                        
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!--End of paragraph, all coding shall be done within above-->
+        </div>
+    </div>
+</body>
+</html>
